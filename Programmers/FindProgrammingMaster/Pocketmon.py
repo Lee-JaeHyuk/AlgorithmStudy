@@ -6,3 +6,7 @@ def solution(nums):
         return int(k)
     elif len(my_set) < k:
         return len(my_set)
+
+#풀이2
+def solution2(ls):
+    return min(len(ls)/2, len(set(ls)))
