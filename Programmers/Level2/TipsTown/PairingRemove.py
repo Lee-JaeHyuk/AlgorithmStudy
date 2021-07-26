@@ -20,18 +20,18 @@ def solution(s):
     return answer
 
 def solution2(s):
-    answer = -1
-    ls = []
-    ls.append(s[0])
-    for i in range(1,len(s)):
-        ls.append(s[i])
-
-    if len(ls) == 0:
+    st = []
+    for i in s:
+        if len(st) == 0:
+            st.append(i)
+        elif st[-1] == i:
+            st.pop()
+        else:
+            st.append(i)
+    if len(st) == 0:
         return 1
     else:
         return 0
 
-    return answer
 
-
-print(solution("atbds"))
+print(solution2("baabbaac"))
